@@ -108,15 +108,15 @@
             #endregion
 
             #region LINQ Syntax
-            List<int> numbers = new List<int>() { 1,2,3,4,5,6,7,8,9,10}; // Local sequence
+            //List<int> numbers = new List<int>() { 1,2,3,4,5,6,7,8,9,10}; // Local sequence
 
 
             #region Fluent Syntax
             //Fluent Syntax has 2 ways
 
-      
+
             #region 1.static method
-            var OddNumbers = Enumerable.Where(numbers, x => x % 2 == 1);
+            //var OddNumbers = Enumerable.Where(numbers, x => x % 2 == 1);
             //foreach (var item in OddNumbers)
             //{
             //    Console.WriteLine(item);
@@ -126,7 +126,7 @@
 
             #region 2.Using ExtensionMethods
 
-            OddNumbers = numbers.Where(x=> x % 2 == 1); //Most Recommended
+            //OddNumbers = numbers.Where(x=> x % 2 == 1); //Most Recommended
             #endregion
 
             #endregion
@@ -134,13 +134,31 @@
             #region Query Syntax[QueryExpression]
 
             //like sqlserver style based on Sql Execution Order 
-            OddNumbers= from n in numbers
-                        where n%2==1
-                        select n;
+            //OddNumbers= from n in numbers
+            //            where n%2==1
+            //            select n;
+
+
             //query must end with select or group by
             #endregion
             #endregion
 
+            #region Linq Execution way
+
+            //Linq has 2 ways for Execution 
+            //Immediate Execution [element,aggergate,casting] ,rest are Deffered Execution
+            
+            List<int> numbers = new List<int>() { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 }; 
+            
+            var OddNumbers = numbers.Where(x => x % 2 == 1); // where is deffered 
+            numbers.AddRange(new int[] {11,12,13,14,15});
+            foreach (var item in OddNumbers)
+            {
+                Console.WriteLine(item);
+            }
+
+
+            #endregion
         }
     }
 }
