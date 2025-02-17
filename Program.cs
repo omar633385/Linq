@@ -48,37 +48,65 @@
 
             #region Anonymous Type
             //create object from class but used only once or twice => No need to create class
-            Employee employee =new Employee() { Id=10,Name="Ahmed",Salary=5000};
+            // Employee employee =new Employee() { Id=10,Name="Ahmed",Salary=5000};
 
-            var employee2 = new { Id = 10, Name = "Ahmed", Salary = 5000 }; // Anonymous Type
+            // var employee2 = new { Id = 10, Name = "Ahmed", Salary = 5000 }; // Anonymous Type
 
-            //we can use dynamic but may throw exception if you want to access property not in the type
+            // //we can use dynamic but may throw exception if you want to access property not in the type
 
-            Console.WriteLine(employee2.GetType().Name); // <>f__AnonymousType0`3
-            //Compiler will create class with these properties  its name will be => AnonymousType0`3
-            // AnonymousType0 means that first AnonymousType compiler has created
-            // `3 means that has 3 properties
+            // Console.WriteLine(employee2.GetType().Name); // <>f__AnonymousType0`3
+            // //Compiler will create class with these properties  its name will be => AnonymousType0`3
+            // // AnonymousType0 means that first AnonymousType compiler has created
+            // // `3 means that has 3 properties
 
-            //object from AnonymousType is immutable => can't be changed
-            
-            //employee2.Id = 20; // invalid
+            // //object from AnonymousType is immutable => can't be changed
 
-            employee2 = new { Id = 10, Name = "Ahmed", Salary = 5000 };
-            // if we want to change object data
-            employee2 = new { Id = 20, employee2.Name, employee2.Salary };
+            // //employee2.Id = 20; // invalid
 
-            employee2 = employee2 with { Id = 20 };// c# 10 feature [syntax sugar]
-            Console.WriteLine(employee2.GetType().Name);
-            // The AnonymousType still the same as long as
-            //1. Same Property name [Case Sensetive]
-            //2. same Property order
+            // employee2 = new { Id = 10, Name = "Ahmed", Salary = 5000 };
+            // // if we want to change object data
+            // employee2 = new { Id = 20, employee2.Name, employee2.Salary };
 
-           var employee02 = new { Id = 50, Name = "hamada", Salary = 8000 };
-           var employee03 = new { Id = 50, name = "hamada", Salary = 8000 };
-           var employee04 = new { Id = 50, Salary = 8000, Name = "hamada" };
+            // employee2 = employee2 with { Id = 20 };// c# 10 feature [syntax sugar]
+            // Console.WriteLine(employee2.GetType().Name);
+            // // The AnonymousType still the same as long as
+            //     //1. Same Property name [Case Sensetive]
+            //    //2. same Property order
+
+            //var employee02 = new { Id = 50, Name = "hamada", Salary = 8000 };
+            //var employee03 = new { Id = 50, name = "hamada", Salary = 8000 };
+            //var employee04 = new { Id = 50, Salary = 8000, Name = "hamada" };
 
 
             #endregion
+
+            #region LINQ
+            //Stands For Language Integrated Query
+            //Linq has 13 category of DQL in SQL integrated in +40 Extension Methods [for built-in interface IEnumerable] these methods are in Enumerable class
+            //LINQ allow us to write queries against data [Stored in sequence] regradless database provider
+
+            //Sequence =>object from class impelments built in interface IEnumberable 
+            //sequence has two types:
+            //1.local[static => L2O,xml=>L2xml]
+            //2. remote [comes from db =>L2 ef] 
+
+
+            // Ef [ORM] translate Linq to [db queries] based on database provider   ==> ex: c# to sql
+
+
+            List<int> numbers = new List<int>() { 1,2,3,4,5,6,7,8,9,10}; // Local sequence
+
+            //List<int> OddNumbers= numbers.Where(x=>x%2==1).ToList();
+            var OddNumbers= numbers.Where(x => x % 2 == 1);
+            foreach (var item in OddNumbers)
+            {
+                Console.WriteLine(item);
+            }
+            //foreach has GetEnumerator(),GetNext() => they are in IEnumerable
+            // so if there is class implements or inherits IEnumerable => foreach can be used
+
+            #endregion
+
         }
     }
 }
