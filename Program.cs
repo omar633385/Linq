@@ -94,17 +94,51 @@
             // Ef [ORM] translate Linq to [db queries] based on database provider   ==> ex: c# to sql
 
 
+            //List<int> numbers = new List<int>() { 1,2,3,4,5,6,7,8,9,10}; // Local sequence
+
+            ////List<int> OddNumbers= numbers.Where(x=>x%2==1).ToList();
+            //var OddNumbers= numbers.Where(x => x % 2 == 1);
+            //foreach (var item in OddNumbers)
+            //{
+            //    Console.WriteLine(item);
+            //}
+            ////foreach has GetEnumerator(),GetNext() => they are in IEnumerable
+            //// so if there is class implements or inherits IEnumerable => foreach can be used
+
+            #endregion
+
+            #region LINQ Syntax
             List<int> numbers = new List<int>() { 1,2,3,4,5,6,7,8,9,10}; // Local sequence
 
-            //List<int> OddNumbers= numbers.Where(x=>x%2==1).ToList();
-            var OddNumbers= numbers.Where(x => x % 2 == 1);
-            foreach (var item in OddNumbers)
-            {
-                Console.WriteLine(item);
-            }
-            //foreach has GetEnumerator(),GetNext() => they are in IEnumerable
-            // so if there is class implements or inherits IEnumerable => foreach can be used
 
+            #region Fluent Syntax
+            //Fluent Syntax has 2 ways
+
+      
+            #region 1.static method
+            var OddNumbers = Enumerable.Where(numbers, x => x % 2 == 1);
+            //foreach (var item in OddNumbers)
+            //{
+            //    Console.WriteLine(item);
+            //} 
+            #endregion
+
+
+            #region 2.Using ExtensionMethods
+
+            OddNumbers = numbers.Where(x=> x % 2 == 1); //Most Recommended
+            #endregion
+
+            #endregion
+
+            #region Query Syntax[QueryExpression]
+
+            //like sqlserver style based on Sql Execution Order 
+            OddNumbers= from n in numbers
+                        where n%2==1
+                        select n;
+            //query must end with select or group by
+            #endregion
             #endregion
 
         }
