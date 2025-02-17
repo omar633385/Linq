@@ -13,16 +13,16 @@
             //var name02; //Invalid => should be inilized but can't be initlized with null
 
             ////c# strongly type  
-            
+
             /// var is used only as local variable not used in class or struct as property or field
             /// function can't return var or take parameter of type var
 
             #endregion
             #region dynamic
-            dynamic name; //valid =>can also be initliazed 
-            //can be initliazed with null
-            name = "hamada";
-            name = 50;
+            //dynamic name; //valid =>can also be initliazed 
+            ////can be initliazed with null
+            //name = "hamada";
+            //name = 50;
             //like var in JS
             //CLR detects datatype based on its last assigned value at RunTime 
 
@@ -30,6 +30,19 @@
 
             ///Most Recommended is var => compiler can detect variable data type at Compliation Time
             ///unlike dynamic => CLR detects datatype at  RunTime (unsafe) => May throw exception
+
+            #endregion
+
+            #region ExtensionMethods
+            //123
+            //321
+            int x = 123;
+            Console.WriteLine($"Before Reversing => x = {x}");
+             int y=IntExtenstions.reverse(x);
+             y=x.reverse(); //int doesn't have function to reverse [Implementation of class int is readonly]
+                         //solution is Extension Method =>  makes int  gain more capabilites
+
+            Console.WriteLine($"After Reversing => x = {y}");
 
             #endregion
         }
