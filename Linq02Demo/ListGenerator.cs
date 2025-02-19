@@ -260,7 +260,5 @@ namespace Linq02Demo
         }
     }
 
-    internal class ListGenerator
-    {
-    }
+    
 
