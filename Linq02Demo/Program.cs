@@ -6,14 +6,14 @@ namespace Linq02Demo
 
     internal class Program
     {
-        static void PrintCollection(IEnumerable collection)
-        {
-            foreach (var item in collection)
+            static void PrintCollection(IEnumerable collection)
             {
+                foreach (var item in collection)
+                {
 
-                Console.WriteLine(item);
+                    Console.WriteLine(item);
+                }
             }
-        }
         static void Main(string[] args)
         {
             #region DataSetup
@@ -305,7 +305,7 @@ namespace Linq02Demo
             //PrintCollection(result);
             #endregion
 
-            #region Generation Operators - Deferred Execution[Empty,Range,Repeat]
+            #region     
             //generates sequence
             // don't have input sequence but have output sequence [Fluent Syntax only] =>By Enumerable class as static function
 
