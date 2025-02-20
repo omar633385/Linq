@@ -240,7 +240,48 @@ namespace Linq02Demo
             #endregion
             #endregion
 
+            #region  Aggregate-operators  - Immediate Execution
 
+            #region Count
+            //var result = ProductsList.Count(p => p.UnitsInStock == 0);
+            //result = ProductsList.Where(p => p.UnitsInStock == 0).Count();
+            ////both are equilvant
+
+            #endregion
+
+            #region Max-Min
+            //var result=ProductsList.Max();//as Product class implements Icomparable for UnitPrice => it will retrieve product that has Maximum UnitPrice
+
+            //result=ProductsList.OrderByDescending(p=>p.UnitPrice).FirstOrDefault();
+            ////in .net 6 they made MaxBy operator that was equilvant to the prevoius line instead of implemen
+            //result = ProductsList.MaxBy(p=>p.ProductID);//it will be more dynamic like Order,OrderBy
+
+            ////the same thing for min
+
+            //Console.WriteLine(result);
+            #endregion
+
+            #region Sum-Average
+            //var sum=ProductsList.Sum(p=>p.UnitPrice);//element to iterate should be numeric
+            //Console.WriteLine(sum);
+            //var avg = ProductsList.Average(p => p.UnitPrice);//element to iterate should be numeric
+            //Console.WriteLine(avg);
+            #endregion
+
+            #region Aggeregate 
+            //var names = new string[] { "omar","ali","ahmed" };
+            //names.Aggregate((n1,n2)=>n1+n2);
+            //// 1st parameter here is named as seeddata the first thing to start
+            //// then 2nd parameter  accumlates (takes data) to 1st parameter then
+            //// 2nd parameter moves to next element
+
+            //foreach (var item in names)
+            //{
+            //    Console.Write(item+" " );
+            //}
+
+            #endregion
+            #endregion
         }
 
     }
