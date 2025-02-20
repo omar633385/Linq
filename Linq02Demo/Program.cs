@@ -133,9 +133,110 @@ namespace Linq02Demo
             //PrintCollection(result);
 
             #region Select many
-           var CustomersOrders= CustomersList.SelectMany(c => c.Orders); // retireve all orders for all customers
-            PrintCollection(CustomersOrders);
+            //var CustomersOrders= CustomersList.SelectMany(c => c.Orders); // retireve all orders for all customers
+            // PrintCollection(CustomersOrders);
             #endregion
+            #endregion
+            #endregion
+
+            #region Ordering-Operators
+
+            #region Get Products Ordered By Price Asc
+
+            //fluent syntax
+            //var result= ProductsList.OrderBy(p=>p.UnitPrice);
+
+            //query syntax
+            //result= from p in ProductsList
+            //            orderby p.UnitPrice
+            //            select p;
+            //PrintCollection(result);
+
+            #endregion
+
+            #region Get Products Ordered By Price Desc
+            //fluent syntax
+            //var result = ProductsList.OrderByDescending(p => p.UnitPrice);
+
+            //query syntax
+            // result= from p in ProductsList
+            //            orderby p.UnitPrice descending
+            //            select p;
+            //PrintCollection(result);
+
+            #endregion
+
+            #region Get Products Ordered By Price Asc and Number Of Items In Stock
+            //fluent syntax
+            //var result = ProductsList.OrderBy(p => p.UnitPrice).ThenBy(p=>p.UnitsInStock);
+
+            //query syntax
+            //result= from p in ProductsList
+            //        orderby p.UnitPrice,p.UnitsInStock
+            //        select p;
+            #endregion
+
+            #region Reverse method example
+            //var result = ProductsList.Where(p => p.UnitsInStock == 0).Reverse();
+            //PrintCollection(result);
+
+            #endregion
+
+            #endregion
+
+            #region Element-operators valid only in fluent syntax[immediate Execution]
+
+            #region First-Last
+            //var element=ProductsList.First(); 
+            //// there is overload that takes predicate
+
+            // element=ProductsList.Last();// there is overload that takes predicate
+
+
+
+
+            //Console.WriteLine(element); 
+            #endregion
+
+
+
+            //First,Last will throw exception if the collection is null or empty
+            //so that FirstOrDefault,LastOrDefault are used widely
+
+            #region First,LastOrDefault
+            //ProductsList = new List<Product>();
+            //
+            //var DefaultElement = ProductsList.FirstOrDefault(); // there is overload that takes predicate
+            //
+            //DefaultElement = ProductsList.FirstOrDefault(new Product() { ProductName = "Product No Found" });
+            //DefaultElement = ProductsList.LastOrDefault(new Product() { ProductName = "Product No Found" });
+            //
+            //DefaultElement = ProductsList.FirstOrDefault(p => p.UnitsInStock == 0, new Product() { ProductName = "Product No Found" });
+            //DefaultElement = ProductsList.LastOrDefault(p => p.UnitsInStock == 0, new Product() { ProductName = "Product No Found" });
+            //
+            //
+            //Console.WriteLine(DefaultElement?.ProductName);// will throw exception unless you add null propagation operator
+
+            #endregion
+
+            #region ElementAt-ElementAtOrDefault
+            //var elementAt=ProductsList.ElementAt(0); //takes index as input
+            //will throw exception if element is null or index not found
+            //elementAt=ProductsList.ElementAtOrDefault(1);
+            //Console.WriteLine(elementAt);
+
+            #endregion
+
+
+            #region Single-SingleOrDefault
+            //var element=ProductsList.Single(); //will throw exception if there is more than one element or Sequence is null
+            //there is overload for Single() that takes predicate
+
+            //var element = ProductsList.Single(p => p.ProductID == 77);
+            ////element =ProductsList.SingleOrDefault(); //will throw exception if there is more than one element
+            //Console.WriteLine(element);
+
+
             #endregion
             #endregion
 
