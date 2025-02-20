@@ -108,23 +108,38 @@ namespace Linq02Demo
 
             #region Select Product In Stock And Apply Discount 10 % On Its Price
             //fluent Syntax
-           //var result= ProductsList.Where(p => p.UnitsInStock > 0)
-           //     .Select(p =>
-           //     new {p.ProductID,p.UnitPrice, PriceAfterDiscount = (p.UnitPrice - p.UnitPrice * .1M) });
-           
-           // //query syntax
-           // result = from p in ProductsList
-           //          where p.UnitsInStock > 0
-           //          select new
-           //          {
-           //              p.ProductID,
-           //              p.UnitPrice,
-           //              PriceAfterDiscount = (p.UnitPrice - p.UnitPrice * .1M)
-           //          };
-           // PrintCollection(result);
-        
+            //var result= ProductsList.Where(p => p.UnitsInStock > 0)
+            //     .Select(p =>
+            //     new {p.ProductID,p.UnitPrice, PriceAfterDiscount = (p.UnitPrice - p.UnitPrice * .1M) });
+
+            // //query syntax
+            // result = from p in ProductsList
+            //          where p.UnitsInStock > 0
+            //          select new
+            //          {
+            //              p.ProductID,
+            //              p.UnitPrice,
+            //              PriceAfterDiscount = (p.UnitPrice - p.UnitPrice * .1M)
+            //          };
+            // PrintCollection(result);
+
+            #endregion
+
+            #region Indexed Select
+            //overload for select that has another parameter index enables us to control index of elements 
+            //valid only in fluent syntax
+
+            //var result = ProductsList.Select((p, i) => new { index=i, p.ProductName });
+            //PrintCollection(result);
+
+            #region Select many
+           var CustomersOrders= CustomersList.SelectMany(c => c.Orders); // retireve all orders for all customers
+            PrintCollection(CustomersOrders);
             #endregion
             #endregion
+            #endregion
+
+
         }
 
     }
