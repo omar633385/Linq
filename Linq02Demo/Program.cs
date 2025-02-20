@@ -282,6 +282,30 @@ namespace Linq02Demo
 
             #endregion
             #endregion
+
+            #region Casting [Conversion] Operators - Immediate Execution
+
+            // List<Product> result= ProductsList.Where(p=>p.UnitsInStock==0).ToList();
+            //Product[] arr= ProductsList.Where(p=>p.UnitsInStock==0).ToArray();
+            // Dictionary<long,Product> dic= ProductsList.Where(p => p.UnitsInStock == 0).ToDictionary(p=>p.ProductID);
+            // Dictionary<long,string> dic02= ProductsList.Where(p => p.UnitsInStock == 0).ToDictionary(p=>p.ProductID,p=>p.ProductName);
+            // HashSet<Product> hash= ProductsList.Where(p => p.UnitsInStock == 0).ToHashSet();
+            //PrintCollection(hash);
+
+
+            // //as Product is class so it will compare References 
+            // //if data of two objects have the same data they won't be equivalent
+            // //so override GetHashCode,Equals to compare values
+
+            //ArrayList array = new ArrayList()
+            //{
+            //    "omar","ali",1,2,3
+            //};
+            //var result=array.OfType<int>();// filters data based on specified type and another element will be ignored from the list/collection
+            //PrintCollection(result);
+            #endregion
+
+
         }
 
     }
