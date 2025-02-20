@@ -305,7 +305,15 @@ namespace Linq02Demo
             //PrintCollection(result);
             #endregion
 
+            #region Generation Operators - Deferred Execution[Empty,Range,Repeat]
+            //generates sequence
+            // don't have input sequence but have output sequence [Fluent Syntax only] =>By Enumerable class as static function
 
+            var result = Enumerable.Range(0, 100); //0 ..99
+            result = Enumerable.Repeat(0, 10); //will repeat 0 for 10 times
+            result=Enumerable.Empty<int>();//generic method of type that sequence will be
+            PrintCollection(result);
+            #endregion
         }
 
     }
