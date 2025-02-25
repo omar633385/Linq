@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\dotnet\\route\\New folder\\05.LINQ\\Assignments\\Linq02Assignment\\Linq02Assignment.csproj",
+      "projectUniqueName": "D:\\dotnet\\route\\New folder\\05.LINQ\\New folder\\Linq\\Linq02Assignment\\Linq02Assignment.csproj",
       "projectName": "Linq02Assignment",
-      "projectPath": "D:\\dotnet\\route\\New folder\\05.LINQ\\Assignments\\Linq02Assignment\\Linq02Assignment.csproj",
+      "projectPath": "D:\\dotnet\\route\\New folder\\05.LINQ\\New folder\\Linq\\Linq02Assignment\\Linq02Assignment.csproj",
       "packagesPath": "C:\\Users\\Omar\\.nuget\\packages\\",
-      "outputPath": "D:\\dotnet\\route\\New folder\\05.LINQ\\Assignments\\Linq02Assignment\\obj\\",
+      "outputPath": "D:\\dotnet\\route\\New folder\\05.LINQ\\New folder\\Linq\\Linq02Assignment\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

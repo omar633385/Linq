@@ -13,3 +13,18 @@ D:\dotnet\route\New folder\05.LINQ\Assignments\Linq02Assignment\obj\Debug\net8.0
 D:\dotnet\route\New folder\05.LINQ\Assignments\Linq02Assignment\obj\Debug\net8.0\Linq02Assignment.genruntimeconfig.cache
 D:\dotnet\route\New folder\05.LINQ\Assignments\Linq02Assignment\obj\Debug\net8.0\ref\Linq02Assignment.dll
 D:\dotnet\route\New folder\05.LINQ\Assignments\Linq02Assignment\obj\Debug\net8.0\Linq02Assignment.sourcelink.json
+D:\dotnet\route\New folder\05.LINQ\New folder\Linq\Linq02Assignment\bin\Debug\net8.0\Linq02Assignment.exe
+D:\dotnet\route\New folder\05.LINQ\New folder\Linq\Linq02Assignment\bin\Debug\net8.0\Linq02Assignment.deps.json
+D:\dotnet\route\New folder\05.LINQ\New folder\Linq\Linq02Assignment\bin\Debug\net8.0\Linq02Assignment.runtimeconfig.json
+D:\dotnet\route\New folder\05.LINQ\New folder\Linq\Linq02Assignment\bin\Debug\net8.0\Linq02Assignment.dll
+D:\dotnet\route\New folder\05.LINQ\New folder\Linq\Linq02Assignment\bin\Debug\net8.0\Linq02Assignment.pdb
+D:\dotnet\route\New folder\05.LINQ\New folder\Linq\Linq02Assignment\obj\Debug\net8.0\Linq02Assignment.GeneratedMSBuildEditorConfig.editorconfig
+D:\dotnet\route\New folder\05.LINQ\New folder\Linq\Linq02Assignment\obj\Debug\net8.0\Linq02Assignment.AssemblyInfoInputs.cache
+D:\dotnet\route\New folder\05.LINQ\New folder\Linq\Linq02Assignment\obj\Debug\net8.0\Linq02Assignment.AssemblyInfo.cs
+D:\dotnet\route\New folder\05.LINQ\New folder\Linq\Linq02Assignment\obj\Debug\net8.0\Linq02Assignment.csproj.CoreCompileInputs.cache
+D:\dotnet\route\New folder\05.LINQ\New folder\Linq\Linq02Assignment\obj\Debug\net8.0\Linq02Assignment.sourcelink.json
+D:\dotnet\route\New folder\05.LINQ\New folder\Linq\Linq02Assignment\obj\Debug\net8.0\Linq02Assignment.dll
+D:\dotnet\route\New folder\05.LINQ\New folder\Linq\Linq02Assignment\obj\Debug\net8.0\refint\Linq02Assignment.dll
+D:\dotnet\route\New folder\05.LINQ\New folder\Linq\Linq02Assignment\obj\Debug\net8.0\Linq02Assignment.pdb
+D:\dotnet\route\New folder\05.LINQ\New folder\Linq\Linq02Assignment\obj\Debug\net8.0\Linq02Assignment.genruntimeconfig.cache
+D:\dotnet\route\New folder\05.LINQ\New folder\Linq\Linq02Assignment\obj\Debug\net8.0\ref\Linq02Assignment.dll
